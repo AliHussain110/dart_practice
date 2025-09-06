@@ -306,59 +306,62 @@ class TaskManager {
 // ===============================================
 
 void main() async {
-  print("=== Section 1 ===");
-  print(safeStringToInt("123"));
-  print(safeStringToInt("abc"));
-  testSection1();
-  Product p1 = Product("Book", null, ["education"]);
-  print(p1.getPriceText());
+  // print("=== Section 1 ===");
+  // print(safeStringToInt("123"));
+  // print(safeStringToInt("abc"));
+  // testSection1();
+  // Product p1 = Product("Book", null, ["education"]);
+  // print(p1.getPriceText());
 
-  print("\n=== Section 2 ===");
-  Dog d = Dog("Buddy");
-  d.makeSound();
-  d.eat();
-  Cat c = Cat("Kitty");
-  c.makeSound();
-  Bird b = Bird("Tweety");
-  b.chirp();
-  b.fly();
+  // print("\n=== Section 2 ===");
+  // Dog d = Dog("Buddy");
+  // d.makeSound();
+  // d.eat();
+  // Cat c = Cat("Kitty");
+  // c.makeSound();
+  // Bird b = Bird("Tweety");
+  // b.chirp();
+  // b.fly();
 
-  print("\n=== Section 3 ===");
-  print(await getUserInfo("123"));
-  print(await getUserInfo("error"));
-  await for (var n in createNumberStream()) {
-    print("Number: $n");
-  }
-  await for (var n in createEvenNumberStream()) {
-    print("Even: $n");
-  }
+  // print("\n=== Section 3 ===");
+  // print(await getUserInfo("123"));
+  // print(await getUserInfo("error"));
+  // await for (var n in createNumberStream()) {
+  //   print("Number: $n");
+  // }
+  // await for (var n in createEvenNumberStream()) {
+  //   print("Even: $n");
+  // }
 
-  print("\n=== Section 4 ===");
-  processNumbers();
-  print(applyOperation<int>((a, b) => a + b, 5, 3));
+  // print("\n=== Section 4 ===");
+  // processNumbers();
+  // print(applyOperation<int>((a, b) => a + b, 5, 3));
 
-  print("\n=== Section 5 ===");
-  var cache = Cache<int>();
-  cache.put("a", 10);
-  print(cache.get("a"));
-  print(cache.containsKey("a"));
-  cache.clear();
+  // print("\n=== Section 5 ===");
+  // var cache = Cache<int>();
+  // cache.put("a", 10);
+  // print(cache.get("a"));
+  // print(cache.containsKey("a"));
+  // cache.clear();
 
-  print("\n=== Section 6 ===");
-  print(await computeSumInIsolate([1, 2, 3, 4, 5]));
+  // print("\n=== Section 6 ===");
+  // print(await computeSumInIsolate([1, 2, 3, 4, 5]));
 
-  print("\n=== Section 7 ===");
-  testAgeValidation(25);
-  testAgeValidation(-5);
+  // print("\n=== Section 7 ===");
+  // testAgeValidation(25);
+  // testAgeValidation(-5);
 
-  print("\n=== Section 8 ===");
-  print("hello".capitalize());
-  print("racecar".isPalindrome);
-  print("longtext".truncate(4));
+  // print("\n=== Section 8 ===");
+  // print("hello".capitalize());
+  // print("racecar".isPalindrome);
+  // print("longtext".truncate(4));
 
   print("\n=== Section 9 ===");
   TaskManager manager = TaskManager();
   manager.addTask(Task(id: "1", title: "Do HW", description: "Math homework"));
+  manager.addTask(Task(id: "3", title: "Do HW", description: "Math homework"));
+  manager.addTask(Task(id: "4", title: "Do HW", description: "Math homework"));
+  manager.addTask(Task(id: "5", title: "Do HW", description: "Math homework"));
   manager.addTask(
     Task(id: "2", title: "Flutter project", description: "Work on app"),
   );
