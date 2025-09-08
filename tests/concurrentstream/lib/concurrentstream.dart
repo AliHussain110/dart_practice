@@ -16,11 +16,10 @@ void _aggregateFunction(SendPort sendPort) async {
     return randomNumber;
   });
   final combineStream = StreamZip([loginStream, transectionStream]);
-  await for (final data in combineStream) {
+  combineStream.listen((data) async {
     var map = {'total_logins': data[0], 'total_revenue': data[1]};
     sendPort.send(map);
-  }
-  ;
+  });
 }
 
 void runAnalytics() async {
